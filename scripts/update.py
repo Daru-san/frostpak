@@ -55,15 +55,7 @@ class Updaters:
 
 ud = Updaters()
 version_pnames = ["bridge-editor", "poketex", "seanime", "clipse-gui"]
-branch_pnames = [
-    "valent",
-    "kronkhite",
-    "waydroid-script",
-    "trashy",
-    "android-translation-layer",
-    "bionic-translation",
-    "art-standalone",
-]
+branch_pnames = ["valent", "kronkhite", "waydroid-script", "trashy"]
 
 for x in version_pnames:
     ud.update_version(x)

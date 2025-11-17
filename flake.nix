@@ -58,16 +58,7 @@
               seanime = pkgs.callPackage ./packages/seanime { };
               seanime-with-desktop = pkgs.callPackage ./packages/seanime { withDesktop = true; };
               mtkclient = pkgs.callPackage ./packages/mtkclient { };
-              bionic-translation = pkgs.callPackage ./packages/bionic-translation { };
-              palsp = pkgs.callPackage ./packages/palsp { };
-              pasls = pkgs.callPackage ./packages/pasls { };
-              jcf-pascal-format = pkgs.callPackage ./packages/jcf-pascal-format { };
 
-              # art-standalone = pkgs.callPackage ./packages/art-standalone { inherit bionic-translation; };
-              #
-              # android-translation-layer = pkgs.callPackage ./packages/android-translation-layer {
-              #   inherit bionic-translation art-standalone;
-              # };
               xbyak = pkgs.callPackage ./packages/xbyak/xbyak.nix { };
               xbyak-aarch64 = pkgs.callPackage ./packages/xbyak/xbyak-aarch64.nix { };
 
