@@ -7,16 +7,16 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "poketex";
-  version = "1.16.3";
+  version = "1.16.4";
 
   src = fetchFromGitHub {
     owner = "ckaznable";
     repo = "poketex";
     rev = "v${version}";
-    hash = "sha256-cT5PBGtpx4lTAgt32rUNpaoVErPL2rVO7q3SnmGpyuE=";
+    hash = "sha256-Dd3FMhXoXTD0l1LhnuPZsheUxWl5D08UmFMbeO55+JQ=";
   };
 
-  cargoHash = "sha256-jip7PJ0JelZp+15fJfYU80lxGgBu6Y/afacznr/Zs9o=";
+  cargoHash = "sha256-zrneOftxDti6lyu0zSRZWXiQCfPYdciZaCdKO0n7yc8=";
 
   buildInputs = lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.CoreFoundation ];
 
