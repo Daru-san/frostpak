@@ -33,7 +33,7 @@
               packages = [ config.packages.snow-updater ];
             };
             packages = rec {
-              bridge-editor = pkgs.callPackage ./packages/bridge-editor { };
+              bridge-editor = pkgs.callPackage ./packages/bridge { };
               xbyak = pkgs.callPackage ./packages/xbyak/xbyak.nix { };
               xbyak-aarch64 = pkgs.callPackage ./packages/xbyak/xbyak-aarch64.nix { };
               tanuki3ds = pkgs.callPackage ./packages/tanuki3ds { inherit xbyak xbyak-aarch64; };
