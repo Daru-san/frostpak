@@ -1,8 +1,7 @@
 {
   lib,
-  stdenv,
   fetchFromGitHub,
-  clang,
+  llvmPackages_19,
   sdl3,
   xxHash,
   cglm,
@@ -10,7 +9,13 @@
   capstone,
   xbyak,
   xbyak-aarch64,
+  pkg-config,
+  glew,
+  libGL,
 }:
+let
+  stdenv = llvmPackages_19.stdenv;
+in
 
 stdenv.mkDerivation rec {
   pname = "tanuki3-ds";
@@ -23,7 +28,12 @@ stdenv.mkDerivation rec {
     hash = "sha256-+Y33OmP4Cq7MeP33fCHdYOKN7aKq5LFrhv0VZXeh2wg=";
   };
 
-  nativeBuildInputs = [ clang ];
+  CPATH = lib.makeSearchPathOutput "dev" "include" [ stdenv.cc.libc ];
+
+  nativeBuildInputs = [
+    llvmPackages_19.clang
+    pkg-config
+  ];
 
   buildInputs = [
     sdl3
@@ -31,7 +41,14 @@ stdenv.mkDerivation rec {
     xxHash
     fdk_aac
     capstone
-    xbyak
+    glew
+    libGL
+  ]
+  ++ lib.optional stdenv.hostPlatform.isx86_64 [ xbyak ]
+  ++ lib.optional stdenv.hostPlatform.isAarch64 [ xbyak-aarch64 ];
+
+  makeFlags = [
+    "CC=clang"
   ];
 
   meta = {
