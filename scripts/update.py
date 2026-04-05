@@ -3,14 +3,6 @@
 import subprocess, os, pathlib
 
 
-currentPath = pathlib.Path().resolve()
-currentDir = os.path.abspath(currentPath)
-
-if not "pkgs".upper() in currentDir.upper():
-    print("Please run this script in the `snowpkgs` repository")
-    exit(0)
-
-
 gitRootDir = subprocess.check_output(["git", "rev-parse", "--show-toplevel"])
 gitRootDir = gitRootDir[:-1]
 
@@ -37,7 +29,7 @@ class Updaters:
 
 
 ud = Updaters()
-version_pnames = ["bridge-editor"]
+version_pnames = ["bridge-editor", "tanuki3ds", "xbyak", "xbyak-aarch64"]
 branch_pnames = ["vigil"]
 
 for x in version_pnames:
