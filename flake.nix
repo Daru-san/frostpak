@@ -45,40 +45,10 @@
               packages = [ config.packages.snow-updater ];
             };
             packages = rec {
-              bridge-editor = pkgs.callPackage ./packages/bridge { };
-              gh-download = pkgs.callPackage ./packages/gh-download { };
-              pokeshell = pkgs.callPackage ./packages/pokeshell { };
-              kronkhite = pkgs.callPackage ./packages/krohnkite { };
-              valent = pkgs.callPackage ./packages/valent { stdenv = pkgs.clangStdenv; };
-              yoke = pkgs.callPackage ./packages/yoke { };
-              poketex = pkgs.callPackage ./packages/poketex { };
-              waydroid-script = pkgs.callPackage ./packages/waydroid-script { };
-              trashy = pkgs.callPackage ./packages/trashy { };
-              nu-periodic-table = pkgs.callPackage ./packages/nushell-periodic-table/default.nix { };
-              seanime = pkgs.callPackage ./packages/seanime { };
-              seanime-with-desktop = pkgs.callPackage ./packages/seanime { withDesktop = true; };
-              mtkclient = pkgs.callPackage ./packages/mtkclient { };
-
+              bridge-editor = pkgs.callPackage ./packages/bridge-editor { };
               xbyak = pkgs.callPackage ./packages/xbyak/xbyak.nix { };
               xbyak-aarch64 = pkgs.callPackage ./packages/xbyak/xbyak-aarch64.nix { };
-
               tanuki3ds = pkgs.callPackage ./packages/tanuki3ds { inherit xbyak xbyak-aarch64; };
-
-              # # Waiting for upstream to update tauri version with next release
-              # rqbit-testing = pkgs.callPackage ./packages/rqbit { };
-
-              rlottie-python = pkgs.callPackage ./packages/rlottie-python { inherit py-build-cmake; };
-
-              py-build-cmake = pkgs.callPackage ./packages/py-build-cmake { };
-
-              hydepanel = pkgs.callPackage ./packages/hydepanel {
-                fabric = inputs.fabric.packages.${pkgs.system}.default;
-                inherit rlottie-python;
-              };
-
-              clipse-gui = pkgs.callPackage ./packages/clipse-gui { };
-
-              # elia = pkgs.callPackage ./packages/elia { };
               snow-updater = pkgs.callPackage ./scripts/default.nix { };
             };
             formatter = pkgs.nixfmt-rfc-style;

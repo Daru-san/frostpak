@@ -19,23 +19,6 @@ os.chdir(gitRootDir)
 
 class Updaters:
     def update_version(self, pname):
-        if pname == "seanime":
-            subprocess.run(
-                [
-                    "nix-update",
-                    "-F",
-                    pname,
-                    "--subpackage",
-                    "web",
-                    "--subpackage",
-                    "server",
-                    "--subpackage",
-                    "desktop",
-                    "--commit",
-                    "--format",
-                ]
-            )
-        else:
             subprocess.run(["nix-update", "-F", pname, "--commit", "--format"])
 
     def update_branch(self, pname):
@@ -54,8 +37,7 @@ class Updaters:
 
 
 ud = Updaters()
-version_pnames = ["bridge-editor", "poketex", "seanime", "clipse-gui"]
-branch_pnames = ["valent", "kronkhite", "waydroid-script", "trashy"]
+version_pnames = ["bridge-editor"]
 
 for x in version_pnames:
     ud.update_version(x)
