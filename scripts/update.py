@@ -38,6 +38,7 @@ class Updaters:
 
 ud = Updaters()
 version_pnames = ["bridge-editor"]
+branch_pnames = ["vigil"]
 
 for x in version_pnames:
     ud.update_version(x)
