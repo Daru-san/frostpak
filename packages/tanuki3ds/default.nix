@@ -18,14 +18,14 @@ let
 in
 
 stdenv.mkDerivation rec {
-  pname = "tanuki3-ds";
-  version = "0.2.3";
+  pname = "tanuki3ds";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     owner = "burhanr13";
     repo = "Tanuki3DS";
     rev = "v${version}";
-    hash = "sha256-+Y33OmP4Cq7MeP33fCHdYOKN7aKq5LFrhv0VZXeh2wg=";
+    hash = "sha256-sUcAPGRpy/CppFQRnoZqaAj4KynBHxDflsAWbC6aL9I=";
   };
 
   CPATH = lib.makeSearchPathOutput "dev" "include" [ stdenv.cc.libc ];
@@ -56,7 +56,7 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/burhanr13/Tanuki3DS";
     license = lib.licenses.gpl3Only;
     maintainers = with lib.maintainers; [ daru-san ];
-    mainProgram = "tanuki3-ds";
+    mainProgram = "tanuki3ds";
     platforms = lib.platforms.all;
   };
 }
