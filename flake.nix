@@ -34,9 +34,8 @@
             };
             packages = rec {
               bridge-editor = pkgs.callPackage ./packages/bridge { };
-              xbyak = pkgs.callPackage ./packages/xbyak/xbyak.nix { };
-              xbyak-aarch64 = pkgs.callPackage ./packages/xbyak/xbyak-aarch64.nix { };
-              tanuki3ds = pkgs.callPackage ./packages/tanuki3ds { inherit xbyak xbyak-aarch64; };
+              xbyak-aarch64 = pkgs.callPackage ./packages/xbyak-aarch64 { };
+              tanuki3ds = pkgs.callPackage ./packages/tanuki3ds { inherit xbyak-aarch64; };
               vigil = pkgs.callPackage ./packages/vigil { };
               snow-updater = pkgs.callPackage ./scripts/default.nix { };
             };
