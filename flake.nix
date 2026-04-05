@@ -1,5 +1,5 @@
 {
-  description = "The packages I use that have not been upstreamed to nixpks";
+  description = "The packages I use that have not been upstreamed to nixpkgs";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
