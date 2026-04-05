@@ -4,13 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    fabric.url = "github:Fabric-Development/fabric";
   };
 
   outputs =
     inputs@{
       flake-parts,
-      fabric,
       nixpkgs,
       self,
       ...
@@ -23,16 +21,6 @@
           "x86_64-linux"
           "aarch64-linux"
         ];
-        flake = {
-          homeManagerModules.default =
-            { pkgs, ... }:
-            {
-              imports = [ ./modules/elia.nix ];
-              programs.elia.package = withSystem pkgs.stdenv.hostPlatform.system (
-                { config, ... }: config.packages.elia
-              );
-            };
-        };
         perSystem =
           {
             config,
