@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation rec {
   pname = "xbyak-aarch64";
-  version = "1.1.2";
+  version = "1.1.3";
 
   src = fetchFromGitHub {
     owner = "fujitsu";
     repo = "xbyak_aarch64";
     rev = "v${version}";
-    hash = "sha256-30oEMADPaqr1OWGYVLa9SwcyBI6pcISnk+AdsgLLX24=";
+    hash = "sha256-ZiVe7f5uo64ldrFVYwG1Z+gqEY+FJ0E3rgqr3EAJcGE=";
   };
 
   nativeBuildInputs = [
