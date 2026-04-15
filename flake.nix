@@ -40,6 +40,7 @@
               spotiflac = pkgs.callPackage ./packages/spotiflac { };
               spotiflac-cli = pkgs.callPackage ./packages/spotiflac/cli.nix { };
               snow-updater = pkgs.callPackage ./scripts/default.nix { };
+              index-fm = pkgs.callPackage ./packages/index-fm { };
             };
             formatter = pkgs.nixfmt-rfc-style;
           };
