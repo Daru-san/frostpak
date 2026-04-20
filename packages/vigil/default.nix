@@ -3,7 +3,6 @@
   stdenv,
   fetchFromGitHub,
   zig_0_15,
-  zig ? zig_0_15,
   callPackage,
 }:
 stdenv.mkDerivation (finalAttrs: {
@@ -34,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   dontSetZigDefaultFlags = true;
 
   nativeBuildInputs = [
-    zig
+    zig_0_15
   ];
 
   meta = {
@@ -43,6 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ daru-san ];
     mainProgram = "vigil";
-    inherit (zig.meta) platforms;
+    inherit (zig_0_15.meta) platforms;
   };
 })
