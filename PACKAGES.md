@@ -6,6 +6,12 @@
 - Status: Passing
 - Version: 2.7.54
 
+## Hymission
+
+- Repository: <https://github.com/gfhdhytghd/hymission>
+- Status: Passing
+- Version: 0.3.0-0.54.3
+
 ## Tanuki3DS
 
 - Repository: <https://github.com/burhanr13/Tanuki3DS>
