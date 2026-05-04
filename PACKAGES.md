@@ -30,12 +30,6 @@
 - Status: Passing
 - Version: 0-unstable-2026-01-04
 
-## xbyak
-
-- Repository: <https://github.com/herumi/xbyak>
-- Status: Failing
-- Version: 7.24.2
-
 ## xbyak-aarch64
 
 - Repository: <https://github.com/fujitsu/xbyak_aarch64>
