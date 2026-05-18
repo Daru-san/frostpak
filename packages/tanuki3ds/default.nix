@@ -19,13 +19,13 @@ in
 
 stdenv.mkDerivation rec {
   pname = "tanuki3ds";
-  version = "0.5.0";
+  version = "0.5.1";
 
   src = fetchFromGitHub {
     owner = "burhanr13";
     repo = "Tanuki3DS";
     rev = "v${version}";
-    hash = "sha256-sUcAPGRpy/CppFQRnoZqaAj4KynBHxDflsAWbC6aL9I=";
+    hash = "sha256-5/X7MYuX7I/agXRWuRMGqAj5dAsXlmLOvvRNWgt7+VY=";
   };
 
   CPATH = lib.makeSearchPathOutput "dev" "include" [ stdenv.cc.libc ];
