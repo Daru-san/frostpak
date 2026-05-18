@@ -8,13 +8,13 @@
 
 hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
   pluginName = "hymission";
-  version = "0.3.0-0.54.3";
+  version = "0.3.3-0.55.0";
 
   src = fetchFromGitHub {
     owner = "gfhdhytghd";
     repo = "hymission";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-YZ4zjX4kqPUXbWsyArj9tezAB7URNl5D10/HRzs/iyw=";
+    hash = "sha256-j85Nx5LMHZhRyKAODusmab1Ll2pKjM/IaImybocwzAE=";
   };
 
   nativeBuildInputs = [
