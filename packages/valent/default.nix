@@ -20,8 +20,10 @@
   pipewire,
   sqlite,
   cmake,
-  tracker,
+  tinysparql,
   libphonenumber,
+  libdex,
+  gobject-introspection,
 }:
 stdenv.mkDerivation rec {
   pname = "valent";
@@ -42,6 +44,7 @@ stdenv.mkDerivation rec {
     cmake
     pkg-config
     wrapGAppsHook4
+    gobject-introspection
   ];
 
   buildInputs = [
@@ -52,10 +55,11 @@ stdenv.mkDerivation rec {
     gst_all_1.gstreamer
     gst_all_1.gst-plugins-base
     json-glib
-    tracker
+    tinysparql
     libadwaita
     libpeas2
     libportal-gtk4
+    libdex
     pulseaudio
     sqlite
     pipewire
