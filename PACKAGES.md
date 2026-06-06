@@ -12,6 +12,12 @@
 - Status: Passing
 - Version: 0.3.3-0.55.0
 
+## Hyprglass
+
+- Repository: <https://github.com/hyprnux/hyprglass>
+- Status: Passing
+- Version: 0.6.2
+
 ## Tanuki3DS
 
 - Repository: <https://github.com/burhanr13/Tanuki3DS>
