@@ -7,7 +7,7 @@
 }:
 
 hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
-  pname = "hyprglass";
+  pluginName = "hyprglass";
   version = "0.6.2";
 
   src = fetchFromGitHub {
