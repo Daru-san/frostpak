@@ -4,11 +4,12 @@
   buildNpmPackage,
   fetchFromGitHub,
   rustPlatform,
-  nodejs_20,
+  nodejs_22,
   cargo-tauri_1,
   pkg-config,
   gsettings-desktop-schemas,
-  webkitgtk_4_0,
+  webkitgtk_4_1,
+  libsoup_3,
   gtk3,
   openssl,
 }:
@@ -28,7 +29,7 @@ let
 
     inherit version src;
 
-    nodejs = nodejs_20;
+    nodejs = nodejs_22;
 
     dontNpmBuild = true;
 
@@ -82,7 +83,8 @@ rustPlatform.buildRustPackage {
     gsettings-desktop-schemas
     gtk3
     openssl
-    webkitgtk_4_0
+    webkitgtk_4_1
+    libsoup_3
   ];
 
   preConfigure = ''
