@@ -10,7 +10,7 @@
 
 - Repository: <https://github.com/gfhdhytghd/hymission>
 - Status: Passing
-- Version: 0.3.0-0.54.3
+- Version: 0.3.3-0.55.0
 
 ## Tanuki3DS
 
