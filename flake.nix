@@ -37,8 +37,6 @@
               xbyak-aarch64 = pkgs.callPackage ./packages/xbyak-aarch64 { };
               tanuki3ds = pkgs.callPackage ./packages/tanuki3ds { inherit xbyak-aarch64; };
               vigil = pkgs.callPackage ./packages/vigil { };
-              spotiflac = pkgs.callPackage ./packages/spotiflac { };
-              spotiflac-cli = pkgs.callPackage ./packages/spotiflac/cli.nix { };
               hymission = pkgs.callPackage ./packages/hymssion { };
               snow-updater = pkgs.callPackage ./scripts/default.nix { };
               index-fm = pkgs.callPackage ./packages/index-fm { };
