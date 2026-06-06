@@ -1,9 +1,9 @@
 {
   lib,
-  stdenv,
   fetchFromGitHub,
   cmake,
   hyprlandPlugins,
+  hyprland,
 }:
 
 hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
@@ -26,7 +26,6 @@ hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
     homepage = "https://github.com/gfhdhytghd/hymission";
     license = lib.licenses.gpl3;
     maintainers = with lib.maintainers; [ daru-san ];
-    mainProgram = "hymission";
-    platforms = lib.platforms.all;
+    platforms = hyprland.meta.platforms;
   };
 })
