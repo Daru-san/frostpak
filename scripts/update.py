@@ -29,8 +29,8 @@ class Updaters:
 
 
 ud = Updaters()
-version_pnames = ["bridge-editor", "tanuki3ds", "xbyak", "xbyak-aarch64", "hymission"]
 branch_pnames = ["vigil"]
+version_pnames = ["bridge-editor", "tanuki3ds", "xbyak", "xbyak-aarch64", "hymission", "hyprglass"]
 
 for x in version_pnames:
     ud.update_version(x)

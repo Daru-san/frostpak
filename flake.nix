@@ -38,6 +38,7 @@
               tanuki3ds = pkgs.callPackage ./packages/tanuki3ds { inherit xbyak-aarch64; };
               vigil = pkgs.callPackage ./packages/vigil { };
               hymission = pkgs.callPackage ./packages/hymssion { };
+              hyprglass = pkgs.callPackage ./packages/hyprglass { };
               snow-updater = pkgs.callPackage ./scripts/default.nix { };
               index-fm = pkgs.callPackage ./packages/index-fm { };
             };
