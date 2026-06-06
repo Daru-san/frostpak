@@ -3,8 +3,8 @@
 ## Bridge
 
 - Repository: <https://github.com/bridge-core/editor>
-- Status: Passing
-- Version: 2.7.54
+- Status: Failing
+- Version: 3.0.2
 
 ## Hymission
 
