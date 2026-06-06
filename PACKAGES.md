@@ -28,7 +28,7 @@
 
 - Repository: <https://github.com/andyholmes/valent>
 - Status: Passing
-- Version: 1.0.0.alpha.48-unstable-2025-09-27
+- Version: 1.0.0.alpha.49-unstable-2026-03-15
 
 ## Vigil
 
