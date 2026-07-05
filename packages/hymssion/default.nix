@@ -4,6 +4,7 @@
   cmake,
   hyprlandPlugins,
   hyprland,
+  nlohmann_json,
 }:
 
 hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
@@ -19,6 +20,10 @@ hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+  ];
+
+  buildInputs = [
+    nlohmann_json
   ];
 
   meta = {
