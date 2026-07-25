@@ -7,13 +7,13 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "vigil";
-  version = "0-unstable-2026-07-11";
+  version = "0.15-compat-unstable-2026-07-24";
 
   src = fetchFromGitHub {
     owner = "chase-lambert";
     repo = "vigil";
-    rev = "e7911d8eb3d70510e81c34d4e35d2ca624c16266";
-    hash = "sha256-WfZDAIzR4yfmSsMDqRp14RjoOEJbLeBp1Vw8ZyURc0I=";
+    rev = "8a68814cd3ed47d12b97441eec5b16939d354b26";
+    hash = "sha256-xZ+wbxkPQF9PXYmhfTy+yw6VYfqzSbZpHrwzv9j2OjI=";
   };
 
   deps = callPackage ./build.zig.zon.nix { };
