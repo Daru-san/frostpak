@@ -15,13 +15,13 @@
 }:
 let
   pname = "editor";
-  version = "3.0.3";
+  version = "3.0.4";
 
   src = fetchFromGitHub {
     owner = "bridge-core";
     repo = "editor";
     rev = "v${version}";
-    hash = "sha256-mtOGeETnv9xMtpX67mL67izvpWKNlmptk5n+ohtYGo8=";
+    hash = "sha256-QpSa67nWseGD/apB1n4i/akwpsmvOS/gLRoP9rtBnrA=";
   };
 
   frontend = buildNpmPackage {
