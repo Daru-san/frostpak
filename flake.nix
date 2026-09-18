@@ -41,6 +41,7 @@
               hymission = pkgs.callPackage ./packages/hymssion { };
               hyprglass = pkgs.callPackage ./packages/hyprglass { };
               snow-updater = pkgs.callPackage ./scripts/default.nix { };
+              waydroid-script = pkgs.callPackage ./packages/waydroid-script { };
               index-fm = pkgs.callPackage ./packages/index-fm { };
             };
             formatter = pkgs.nixfmt-rfc-style;

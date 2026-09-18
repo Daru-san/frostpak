@@ -30,7 +30,7 @@ class Updaters:
 
 ud = Updaters()
 version_pnames = ["bridge-editor", "tanuki3ds", "xbyak-aarch64", "hymission", "hyprglass"]
-branch_pnames = ["vigil", "valent"]
+branch_pnames = ["vigil", "valent", "waydroid-script"]
 
 for x in version_pnames:
     ud.update_version(x)
