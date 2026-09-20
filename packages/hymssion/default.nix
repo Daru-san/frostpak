@@ -5,6 +5,9 @@
   hyprlandPlugins,
   hyprland,
   nlohmann_json,
+  gtk4,
+  libadwaita,
+  gtk4-layer-shell,
 }:
 
 hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
@@ -24,6 +27,9 @@ hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
 
   buildInputs = [
     nlohmann_json
+    gtk4
+    gtk4-layer-shell
+    libadwaita
   ];
 
   meta = {
