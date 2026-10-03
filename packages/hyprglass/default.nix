@@ -1,9 +1,9 @@
 {
   lib,
   fetchFromGitHub,
-  nix-update-script,
   hyprlandPlugins,
   hyprland,
+  wayland-scanner,
 }:
 
 hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
@@ -26,6 +26,10 @@ hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
 
     runHook postInstall
   '';
+
+  nativeBuildInputs = [
+    wayland-scanner
+  ];
 
   passthru.updateArgs = [ ];
 
