@@ -26,6 +26,8 @@ hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
     nlohmann_json
   ];
 
+  passthru.updateArgs = [ ];
+
   meta = {
     description = "Mission control style workspace&windows overview plugin for Hyprland";
     homepage = "https://github.com/gfhdhytghd/hymission";

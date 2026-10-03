@@ -3,10 +3,11 @@
   nix-update,
   lib,
   python3Packages,
+  nixfmt,
 }:
 python3Packages.buildPythonApplication rec {
   pname = "snow-updater";
-  version = "1.1";
+  version = "1.2";
   format = "other";
 
   src = ./.;
@@ -26,7 +27,10 @@ python3Packages.buildPythonApplication rec {
 
   postInstall =
     let
-      wrapperPath = lib.makeBinPath [ nix-update ];
+      wrapperPath = lib.makeBinPath [
+        nix-update
+        nixfmt
+      ];
     in
     ''
       wrapProgram $out/bin/snow-updater \

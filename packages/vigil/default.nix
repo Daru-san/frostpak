@@ -36,6 +36,8 @@ stdenv.mkDerivation (finalAttrs: {
     zig
   ];
 
+  passthru.updateArgs = [ "--version=branch" ];
+
   meta = {
     description = "A clean, fast build watcher for Zig";
     homepage = "https://github.com/chase-lambert/vigil";

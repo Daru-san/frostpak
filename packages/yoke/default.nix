@@ -27,6 +27,8 @@ python3.pkgs.buildPythonApplication rec {
 
   pythonImportsCheck = [ "yoke" ];
 
+  passthru.updateArgs = [ ];
+
   meta = with lib; {
     description = "Turns your Android device into a customizable gamepad for Windows/Mac/Linux";
     homepage = "https://github.com/rmst/yoke";

@@ -72,6 +72,8 @@ stdenv.mkDerivation rec {
     "-Dvapi=false"
   ];
 
+  passthru.updateArgs = [ "--version=branch" ];
+
   meta = {
     description = "Implementation of the KDE Connect protocol, built on GNOME platform libraries";
     mainProgram = "valent";
