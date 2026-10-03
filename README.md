@@ -28,7 +28,7 @@ This repository provides a nix flake that exports the package definitions.
 # home.nix
 {pkgs, inputs, ...}: {
   # Use the flake input
-  home.packages = [ inputs.snowpkgs.packages.${pkgs.hostPlatform.system}.vigil ];
+  home.packages = [ inputs.frostpak.packages.${pkgs.hostPlatform.system}.vigil ];
 
   # Or using the overlay
   nixpkgs.overlays = [
