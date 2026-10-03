@@ -20,6 +20,8 @@ stdenv.mkDerivation rec {
     cmake
   ];
 
+  passthru.updateArgs = [ ];
+
   meta = {
     description = "";
     homepage = "https://github.com/fujitsu/xbyak_aarch64/";
