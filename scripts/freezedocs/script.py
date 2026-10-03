@@ -75,8 +75,6 @@ def render(pkgs):
     ]
     for attr in sorted(pkgs):
         p = pkgs[attr]
-        if p['pname'] == "freezedocs" or p['pname'] == "freezeup":
-          continue
         lines.append(
             "| " + " | ".join(
                 [
