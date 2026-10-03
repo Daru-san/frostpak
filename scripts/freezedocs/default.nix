@@ -6,8 +6,8 @@
   nixfmt,
 }:
 python3Packages.buildPythonApplication rec {
-  pname = "snow-updater";
-  version = "1.2";
+  pname = "freezedocs";
+  version = "1.1";
   format = "other";
 
   src = ./.;
@@ -20,7 +20,7 @@ python3Packages.buildPythonApplication rec {
     runHook preInstall
 
     mkdir -p $out/bin
-    install -Dm775 $src/update.py $out/bin/${pname}
+    install -Dm775 $src/script.py $out/bin/${pname}
 
     runHook postInstall
   '';
@@ -33,13 +33,14 @@ python3Packages.buildPythonApplication rec {
       ];
     in
     ''
-      wrapProgram $out/bin/snow-updater \
+      wrapProgram $out/bin/freezedocs \
         --prefix PATH : ${wrapperPath}
     '';
 
   meta = {
-    description = "The update script for my packages";
+    description = "The docgen script for frostpak";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ daru-san ];
+    mainProgram = "freezedocs";
   };
 }

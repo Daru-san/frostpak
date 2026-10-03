@@ -14,11 +14,12 @@ jobs:
           fetch-depth: 0
       - name: Install Nix
         uses: cachix/install-nix-action@v20
+
       - name: Update flake packages
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          nix develop --command snow-updater
+          nix develop --command freezeup
         continue-on-error: true
 
       - name: Create PR

@@ -2,9 +2,9 @@
 """Update flake packages with nix-update.
 
 Usage:
-  snow-updater                    Search for packages with passthru.updateArgs
-  snow-updater -f packages.txt    Read packages from a file
-  snow-updater vigil valent       Provide package names
+  freezup                    Search for packages with passthru.updateArgs
+  freezup -f packages.txt    Read packages from a file
+  freezup vigil valent       Provide package names
 
 File format, one package per line (# comments allowed):
   bridge-editor
@@ -47,6 +47,12 @@ def read_file(path):
             pkgs[name] = args
     return pkgs
 
+def update_docs():
+    subprocess.run(["freezedocs"], check=True)
+    subprocess.run(["git", "add", "PACKAGES.md"], check=True)
+
+    if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode != 0:
+        subprocess.run(["git", "commit", "-m", "docs: update package list"], check=True)
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
@@ -72,6 +78,8 @@ def main():
         cmd = ["nix-update", "--flake", name, "--commit", "--format", *args]
         if subprocess.run(cmd).returncode != 0:
             failed.append(name)
+
+    update_docs()
 
     if failed:
         print(f"Failed: {', '.join(failed)}", file=sys.stderr)

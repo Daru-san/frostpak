@@ -30,7 +30,10 @@
           {
             overlayAttrs = config.packages;
             devShells.default = pkgs.mkShellNoCC {
-              packages = [ config.packages.snow-updater ];
+              packages = with config.packages; [
+                freezeup
+                freezedocs
+              ];
             };
             packages = rec {
               bridge-editor = pkgs.callPackage ./packages/bridge { };
@@ -43,6 +46,12 @@
               snow-updater = pkgs.callPackage ./scripts/default.nix { };
               waydroid-script = pkgs.callPackage ./packages/waydroid-script { };
               index-fm = pkgs.callPackage ./packages/index-fm { };
+
+              freezeup = pkgs.callPackage ./scripts/freezeup {
+                freezedocs = freezedocs;
+              };
+              freezedocs = pkgs.callPackage ./scripts/freezedocs {
+              };
             };
             formatter = pkgs.nixfmt-rfc-style;
           };
