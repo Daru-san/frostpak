@@ -51,6 +51,8 @@ stdenv.mkDerivation rec {
     "CC=clang"
   ];
 
+  passthru.updateArgs = [ ];
+
   meta = {
     description = "3DS Emulator";
     homepage = "https://github.com/burhanr13/Tanuki3DS";
