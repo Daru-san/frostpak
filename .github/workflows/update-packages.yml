@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Install Nix
         uses: cachix/install-nix-action@v20
       - name: Update flake packages
@@ -17,6 +19,8 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           nix develop --command snow-updater
+        continue-on-error: true
+
       - name: Create PR
         id: create-pr
         uses: peter-evans/create-pull-request@v4
