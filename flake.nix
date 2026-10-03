@@ -43,7 +43,6 @@
               valent = pkgs.callPackage ./packages/valent { };
               hymission = pkgs.callPackage ./packages/hymssion { };
               hyprglass = pkgs.callPackage ./packages/hyprglass { };
-              snow-updater = pkgs.callPackage ./scripts/default.nix { };
               waydroid-script = pkgs.callPackage ./packages/waydroid-script { };
               index-fm = pkgs.callPackage ./packages/index-fm { };
 
