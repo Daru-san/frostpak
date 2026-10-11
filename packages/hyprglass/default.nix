@@ -8,13 +8,13 @@
 
 hyprlandPlugins.mkHyprlandPlugin (finalAttrs: {
   pluginName = "hyprglass";
-  version = "0.9.1";
+  version = "0.10.0";
 
   src = fetchFromGitHub {
     owner = "hyprnux";
     repo = "hyprglass";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-V8w1SLd9u2wfMh0kvFkHbhV9I5wDQey0S2SyfvGo2LM=";
+    hash = "sha256-60nDpYUgPXue7iSWHb05goz95j0cNmBYAyhlpviu7K4=";
   };
 
   installPhase = ''
