@@ -4,7 +4,7 @@
 | Package | Version | Description | Homepage |  License |
 | --- | --- | --- | --- | --- |
 | `editor` | 3.0.4 | A lightweight IDE for Minecraft Add-Ons | <https://github.com/bridge-core/editor> | GPL-3.0-only |
-| `hymission` | 0.10.0-v0.56.2 | Mission control style workspace&windows overview plugin for Hyprland | <https://github.com/gfhdhytghd/hymission> | GPL-3.0 |
+| `hymission` | 0.11.0-v0.56.2 | Mission control style workspace&windows overview plugin for Hyprland | <https://github.com/gfhdhytghd/hymission> | GPL-3.0 |
 | `hyprglass` | 0.10.0 | Hyprland plugin that add blur, lens, difraction, refraction effects to transparent windows. Inspired by Liquid Glass design | <https://github.com/hyprnux/hyprglass> | BSD-3-Clause |
 | `index-fm` | 4.0.2 | Multi-platform file manager | <https://github.com/KDE/index-fm> | BSD-2-Clause, CC0-1.0 |
 | `tanuki3ds` | 0.5.1 | 3DS Emulator | <https://github.com/burhanr13/Tanuki3DS> | GPL-3.0-only |
