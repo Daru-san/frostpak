@@ -64,7 +64,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
       }
   '';
 
-  passthru.updateScript = nix-update-script { };
+  passthru.updateArgs = [ ];
 
   meta = {
     description = "A lightweight native Linux color picker and screen ruler, inspired by Microsoft PowerToys and built in Rust for Wayland and X11";
