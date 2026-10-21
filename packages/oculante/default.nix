@@ -22,18 +22,18 @@
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
-  pname = "oculante";
+  pname = "oculante-unstable";
 
-  version = "0.9.6";
+  version = "1.0.0-rc.1";
 
   src = fetchFromGitHub {
     owner = "woelper";
     repo = "oculante";
     tag = finalAttrs.version;
-    hash = "sha256-gM5wUEhake17TBKl7AEdc67XYTPMm12n2CzDdvr7bXk=";
+    hash = "sha256-U1burm5/rVSpx7V8YKWC9bQw9P728pjGKoWGpB5+Iy8=";
   };
 
-  cargoHash = "sha256-0/t4NbRALcQ7Ma05wW5YLliFSBXdPRPkr2AecOOYRdY=";
+  cargoHash = "sha256-cudIZB+hyCDJLURX9IrdUZYd6XMMklj/KrPwtyf2YxM=";
 
   env.SHADERC_LIB_DIR = "${lib.getLib shaderc}/lib";
 
@@ -88,6 +88,8 @@ rustPlatform.buildRustPackage (finalAttrs: {
         )
       }
   '';
+
+  passthru.updateArgs = [ "--version=unstable" ];
 
   meta = {
     broken = stdenv.hostPlatform.isDarwin;
