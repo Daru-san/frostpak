@@ -50,7 +50,7 @@
             hymission = pkgs.callPackage ./packages/hymssion { };
             hyprglass = pkgs.callPackage ./packages/hyprglass { };
             pixelkit = pkgs.callPackage ./packages/pixelkit { };
-            oculante = pkgs.callPackage ./packages/oculante { };
+            oculante-unstable = pkgs.callPackage ./packages/oculante { };
             waydroid-script = pkgs.callPackage ./packages/waydroid-script { };
             index-fm = pkgs.callPackage ./packages/index-fm { };
           };
