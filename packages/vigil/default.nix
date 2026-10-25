@@ -44,6 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ daru-san ];
     mainProgram = "vigil";
-    inherit (zig.meta) platforms;
+    inherit (zig_0_16.meta) platforms;
   };
 })
