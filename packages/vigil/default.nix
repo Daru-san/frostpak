@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  zig,
+  zig_0_16,
   callPackage,
 }:
 stdenv.mkDerivation (finalAttrs: {
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   dontSetZigDefaultFlags = true;
 
   nativeBuildInputs = [
-    zig
+    zig_0_16
   ];
 
   passthru.updateArgs = [ "--version=branch" ];
