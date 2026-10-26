@@ -24,16 +24,16 @@
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "oculante-unstable";
 
-  version = "1.0.0-rc.1";
+  version = "1.0.0-rc.2";
 
   src = fetchFromGitHub {
     owner = "woelper";
     repo = "oculante";
     tag = finalAttrs.version;
-    hash = "sha256-U1burm5/rVSpx7V8YKWC9bQw9P728pjGKoWGpB5+Iy8=";
+    hash = "sha256-pxpExvc75UATLv0OCBDnn0geWAD3SNJYwN6c+u1UGyk=";
   };
 
-  cargoHash = "sha256-cudIZB+hyCDJLURX9IrdUZYd6XMMklj/KrPwtyf2YxM=";
+  cargoHash = "sha256-SDd3D7/tQax3YmzcHYld4SMND40TRLzpw6H7gfE2iwU=";
 
   env.SHADERC_LIB_DIR = "${lib.getLib shaderc}/lib";
 
