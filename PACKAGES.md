@@ -4,10 +4,10 @@
 | Package | Version | Description | Homepage |  License |
 | --- | --- | --- | --- | --- |
 | `editor` | 3.0.4 | A lightweight IDE for Minecraft Add-Ons | <https://github.com/bridge-core/editor> | GPL-3.0-only |
-| `hymission` | 0.11.0-v0.56.2 | Mission control style workspace&windows overview plugin for Hyprland | <https://github.com/gfhdhytghd/hymission> | GPL-3.0 |
+| `hymission` | 0.12.0-v0.57.0 | Mission control style workspace&windows overview plugin for Hyprland | <https://github.com/gfhdhytghd/hymission> | GPL-3.0 |
 | `hyprglass` | 0.11.0 | Hyprland plugin that add blur, lens, difraction, refraction effects to transparent windows. Inspired by Liquid Glass design | <https://github.com/hyprnux/hyprglass> | BSD-3-Clause |
 | `index-fm` | 4.0.2 | Multi-platform file manager | <https://github.com/KDE/index-fm> | BSD-2-Clause, CC0-1.0 |
-| `oculante-unstable` | 1.0.0-rc.2 | Minimalistic crossplatform image viewer written in Rust | <https://github.com/woelper/oculante> | MIT |
+| `oculante-unstable` | 1.0.0-rc.3 | Minimalistic crossplatform image viewer written in Rust | <https://github.com/woelper/oculante> | MIT |
 | `pixelkit` | 0.4.2 | A lightweight native Linux color picker and screen ruler, inspired by Microsoft PowerToys and built in Rust for Wayland and X11 | <https://github.com/Kuucheen/PixelKit> | Apache-2.0, MIT |
 | `tanuki3ds` | 0.5.1 | 3DS Emulator | <https://github.com/burhanr13/Tanuki3DS> | GPL-3.0-only |
 | `valent` | 1.0.0.alpha.49-unstable-2026-03-15 | Implementation of the KDE Connect protocol, built on GNOME platform libraries | <https://valent.andyholmes.ca> | GPL-3.0-or-later, CC0-1.0, CC-BY-SA-3.0 |
