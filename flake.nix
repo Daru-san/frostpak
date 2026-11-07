@@ -51,6 +51,7 @@
             hyprglass = pkgs.callPackage ./packages/hyprglass { };
             pixelkit = pkgs.callPackage ./packages/pixelkit { };
             oculante-unstable = pkgs.callPackage ./packages/oculante { };
+            tuidict = pkgs.callPackage ./packages/tuidict { };
             waydroid-script = pkgs.callPackage ./packages/waydroid-script { };
             index-fm = pkgs.callPackage ./packages/index-fm { };
           };
